@@ -36,7 +36,22 @@ bash install.sh
 ## 🚀 Data Preparation
 
 
-   Follow [stark](https://github.com/researchmm/Stark) and [ostrack](https://github.com/botaoye/OSTrack) frameworks to set your datasets
+   - We employed the official LightFC code on our hardware setup, using pre-trained weights to train the model
+on benchmark datasets including GOT-10k, LaSOT, TrackingNet, and COCO2017. We followed [LightFC](https://github.com/LiYunfengLYF/LightFC) 
+frameworks to set our datasets.The performance of LightFC was then evaluated against these benchmarks, and the results
+were recorded under the designation LightFC.
+- Adopting a data-centric approach, we expanded our training set to incorporate the UAVSOT dataset alongside
+the aforementioned benchmarks. This expansion facilitated the development of a new baseline model, named 
+LightFC-UAVSOT. We then conducted evaluations of this model against the benchmark datasets to assess its performance
+enhancements derived from the extended training set.UAVSOT includes two subsets: UAVSOT-TT (small target) and UAVSOT-FM (fast motion)
+  - UAVSOT-TT
+    -  [GOT-10k-TT](./UAVSOT-Dataset-Sequences/UAVSOT-TT/GOT-10k-TT.txt)  
+    -  [LaSOT-TT](./UAVSOT-Dataset-Sequences/UAVSOT-TT/LaSOT-TT.txt) 
+    -  [TrackingNet-TT](./UAVSOT-Dataset-Sequences/UAVSOT-TT/TrackingNet-TT.txt) 
+  - UAVSOT-FM
+    -  [GOT-10k-FM](./UAVSOT-Dataset-Sequences/UAVSOT-FM/GOT-10k-FM.txt) 
+    -  [LaSOT-FM](./UAVSOT-Dataset-Sequences/UAVSOT-FM/LaSOT-FM.txt) 
+    -  [TrackingNet-FM](./UAVSOT-Dataset-Sequences/UAVSOT-FM/TrackingNet-FM.txt) 
 
 
 ## 🚀 Project File Directory
